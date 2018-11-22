@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54B71DC1FC865C9776716996 /* Pods_Tindoggo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3CF6EC8396592A2FAB6118 /* Pods_Tindoggo.framework */; };
 		CBC87C9221A64F1200BADC42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC87C9121A64F1200BADC42 /* AppDelegate.swift */; };
 		CBC87C9421A64F1200BADC42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC87C9321A64F1200BADC42 /* ViewController.swift */; };
 		CBC87C9721A64F1200BADC42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC87C9521A64F1200BADC42 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8FAB6C7110E68F196E2EF911 /* Pods-Tindoggo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindoggo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tindoggo/Pods-Tindoggo.debug.xcconfig"; sourceTree = "<group>"; };
+		9F3CF6EC8396592A2FAB6118 /* Pods_Tindoggo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tindoggo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECACEE347664A0F6A5B625B /* Pods-Tindoggo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindoggo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tindoggo/Pods-Tindoggo.release.xcconfig"; sourceTree = "<group>"; };
 		CBC87C8E21A64F1200BADC42 /* Tindoggo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tindoggo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC87C9121A64F1200BADC42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBC87C9321A64F1200BADC42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B71DC1FC865C9776716996 /* Pods_Tindoggo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EABD11BF2371107881D5758 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FAB6C7110E68F196E2EF911 /* Pods-Tindoggo.debug.xcconfig */,
+				BECACEE347664A0F6A5B625B /* Pods-Tindoggo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A4107582CD3841FD07645FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F3CF6EC8396592A2FAB6118 /* Pods_Tindoggo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBC87C8521A64F1200BADC42 = {
 			isa = PBXGroup;
 			children = (
 				CBC87C9021A64F1200BADC42 /* Tindoggo */,
 				CBC87C8F21A64F1200BADC42 /* Products */,
+				5EABD11BF2371107881D5758 /* Pods */,
+				7A4107582CD3841FD07645FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBC87CA021A64F1300BADC42 /* Build configuration list for PBXNativeTarget "Tindoggo" */;
 			buildPhases = (
+				8497335A7555E74BED40FA57 /* [CP] Check Pods Manifest.lock */,
 				CBC87C8A21A64F1200BADC42 /* Sources */,
 				CBC87C8B21A64F1200BADC42 /* Frameworks */,
 				CBC87C8C21A64F1200BADC42 /* Resources */,
+				39D41AC3F2316E0FC23C1E5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39D41AC3F2316E0FC23C1E5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tindoggo/Pods-Tindoggo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tindoggo/Pods-Tindoggo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8497335A7555E74BED40FA57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tindoggo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBC87C8A21A64F1200BADC42 /* Sources */ = {
@@ -280,11 +353,13 @@
 		};
 		CBC87CA121A64F1300BADC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FAB6C7110E68F196E2EF911 /* Pods-Tindoggo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23472C7JBS;
 				INFOPLIST_FILE = Tindoggo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +373,13 @@
 		};
 		CBC87CA221A64F1300BADC42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BECACEE347664A0F6A5B625B /* Pods-Tindoggo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23472C7JBS;
 				INFOPLIST_FILE = Tindoggo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
