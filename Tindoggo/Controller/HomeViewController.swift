@@ -14,6 +14,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var stack: UIStackView!
     
+    @IBOutlet weak var like: UIImageView!
+    
+    @IBOutlet weak var nope: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

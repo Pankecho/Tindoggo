@@ -27,7 +27,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swipe Card" translatesAutoresizingMaskIntoConstraints="NO" id="gnX-iS-8dk">
                                                 <rect key="frame" x="0.0" y="0.0" width="351" height="501.5"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="POM-Ic-DGb">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="matilda" translatesAutoresizingMaskIntoConstraints="NO" id="POM-Ic-DGb">
                                                 <rect key="frame" x="12" y="8" width="327" height="436.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="POM-Ic-DGb" secondAttribute="height" multiplier="325:434" id="6mc-bJ-ULN"/>
@@ -42,9 +42,25 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like_image" translatesAutoresizingMaskIntoConstraints="NO" id="SQO-Nu-NlJ">
+                                                <rect key="frame" x="12" y="12" width="150" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="Zls-vq-bkm"/>
+                                                    <constraint firstAttribute="height" constant="60" id="krR-1c-mDO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nope_image" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-8U-8F0">
+                                                <rect key="frame" x="189" y="12" width="150" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="7tj-lh-0oX"/>
+                                                    <constraint firstAttribute="height" constant="60" id="I2t-iS-zGL"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="SQO-Nu-NlJ" firstAttribute="leading" secondItem="B3e-f0-lUB" secondAttribute="leading" constant="12" id="0O5-V9-y0Z"/>
+                                            <constraint firstItem="SQO-Nu-NlJ" firstAttribute="top" secondItem="B3e-f0-lUB" secondAttribute="top" constant="12" id="17p-cH-PvU"/>
                                             <constraint firstItem="gnX-iS-8dk" firstAttribute="top" secondItem="B3e-f0-lUB" secondAttribute="top" id="3mx-dI-nht"/>
                                             <constraint firstAttribute="width" secondItem="B3e-f0-lUB" secondAttribute="height" multiplier="352:503" id="3oT-5o-LYC"/>
                                             <constraint firstItem="POM-Ic-DGb" firstAttribute="leading" secondItem="B3e-f0-lUB" secondAttribute="leading" constant="12" id="67Y-eY-dcz"/>
@@ -56,6 +72,8 @@
                                             <constraint firstItem="gnX-iS-8dk" firstAttribute="leading" secondItem="B3e-f0-lUB" secondAttribute="leading" id="Yas-ag-FHC"/>
                                             <constraint firstAttribute="trailing" secondItem="gnX-iS-8dk" secondAttribute="trailing" id="aQN-Zp-7PV"/>
                                             <constraint firstAttribute="trailing" secondItem="POM-Ic-DGb" secondAttribute="trailing" constant="12" id="e58-2d-6XY"/>
+                                            <constraint firstItem="ODN-8U-8F0" firstAttribute="top" secondItem="B3e-f0-lUB" secondAttribute="top" constant="12" id="gGl-Df-hY0"/>
+                                            <constraint firstAttribute="trailing" secondItem="ODN-8U-8F0" secondAttribute="trailing" constant="12" id="oC2-Gc-rvf"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1X6-Ur-xYh" userLabel="Button">
@@ -110,6 +128,8 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="OfN-IN-qAU"/>
                     <connections>
                         <outlet property="cardView" destination="B3e-f0-lUB" id="DLQ-qj-of0"/>
+                        <outlet property="like" destination="SQO-Nu-NlJ" id="llR-3M-4MS"/>
+                        <outlet property="nope" destination="ODN-8U-8F0" id="4kz-Rd-xA7"/>
                         <outlet property="stack" destination="SV3-Sb-ciQ" id="NZv-Xm-gTj"/>
                     </connections>
                 </viewController>
@@ -143,5 +163,8 @@
         <image name="Rewind" width="51" height="51"/>
         <image name="Super Like" width="51" height="51"/>
         <image name="Swipe Card" width="356" height="507"/>
+        <image name="like_image" width="170" height="114"/>
+        <image name="matilda" width="3024" height="4032"/>
+        <image name="nope_image" width="197" height="130"/>
     </resources>
 </document>
