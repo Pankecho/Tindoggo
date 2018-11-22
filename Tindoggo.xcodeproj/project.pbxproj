@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		54B71DC1FC865C9776716996 /* Pods_Tindoggo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3CF6EC8396592A2FAB6118 /* Pods_Tindoggo.framework */; };
 		CBC87C9221A64F1200BADC42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC87C9121A64F1200BADC42 /* AppDelegate.swift */; };
-		CBC87C9421A64F1200BADC42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC87C9321A64F1200BADC42 /* ViewController.swift */; };
 		CBC87C9721A64F1200BADC42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC87C9521A64F1200BADC42 /* Main.storyboard */; };
 		CBC87C9921A64F1300BADC42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC87C9821A64F1300BADC42 /* Assets.xcassets */; };
 		CBC87C9C21A64F1300BADC42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC87C9A21A64F1300BADC42 /* LaunchScreen.storyboard */; };
+		CBC87CA521A6587300BADC42 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC87CA421A6587300BADC42 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +21,11 @@
 		BECACEE347664A0F6A5B625B /* Pods-Tindoggo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindoggo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tindoggo/Pods-Tindoggo.release.xcconfig"; sourceTree = "<group>"; };
 		CBC87C8E21A64F1200BADC42 /* Tindoggo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tindoggo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC87C9121A64F1200BADC42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBC87C9321A64F1200BADC42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBC87C9621A64F1200BADC42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBC87C9821A64F1300BADC42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBC87C9B21A64F1300BADC42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBC87C9D21A64F1300BADC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC87CA421A6587300BADC42 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +78,22 @@
 		CBC87C9021A64F1200BADC42 /* Tindoggo */ = {
 			isa = PBXGroup;
 			children = (
+				CBC87CA321A6583E00BADC42 /* Controller */,
 				CBC87C9121A64F1200BADC42 /* AppDelegate.swift */,
-				CBC87C9321A64F1200BADC42 /* ViewController.swift */,
 				CBC87C9521A64F1200BADC42 /* Main.storyboard */,
 				CBC87C9821A64F1300BADC42 /* Assets.xcassets */,
 				CBC87C9A21A64F1300BADC42 /* LaunchScreen.storyboard */,
 				CBC87C9D21A64F1300BADC42 /* Info.plist */,
 			);
 			path = Tindoggo;
+			sourceTree = "<group>";
+		};
+		CBC87CA321A6583E00BADC42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CBC87CA421A6587300BADC42 /* HomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBC87C9421A64F1200BADC42 /* ViewController.swift in Sources */,
 				CBC87C9221A64F1200BADC42 /* AppDelegate.swift in Sources */,
+				CBC87CA521A6587300BADC42 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pankecho.Tindoggo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -387,7 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pankecho.Tindoggo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

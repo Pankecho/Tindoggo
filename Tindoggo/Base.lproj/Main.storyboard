@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gc9-b1-4HW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,74 +10,128 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tindoggo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Tindoggo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3e-f0-lUB">
-                                <rect key="frame" x="11" y="29" width="352" height="503"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SV3-Sb-ciQ">
+                                <rect key="frame" x="12" y="72" width="351" height="583.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Swipe Card" translatesAutoresizingMaskIntoConstraints="NO" id="gnX-iS-8dk">
-                                        <rect key="frame" x="0.0" y="0.0" width="352" height="503"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POM-Ic-DGb">
-                                        <rect key="frame" x="14" y="8" width="325" height="434"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Matilda, 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwx-gT-NLK">
-                                        <rect key="frame" x="14" y="450" width="325" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3e-f0-lUB" userLabel="Card">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="501.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swipe Card" translatesAutoresizingMaskIntoConstraints="NO" id="gnX-iS-8dk">
+                                                <rect key="frame" x="0.0" y="0.0" width="351" height="501.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="POM-Ic-DGb">
+                                                <rect key="frame" x="12" y="8" width="327" height="436.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="POM-Ic-DGb" secondAttribute="height" multiplier="325:434" id="6mc-bJ-ULN"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matilda, 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwx-gT-NLK">
+                                                <rect key="frame" x="12" y="452.5" width="327" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="okI-NO-BXM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="gnX-iS-8dk" firstAttribute="top" secondItem="B3e-f0-lUB" secondAttribute="top" id="3mx-dI-nht"/>
+                                            <constraint firstAttribute="width" secondItem="B3e-f0-lUB" secondAttribute="height" multiplier="352:503" id="3oT-5o-LYC"/>
+                                            <constraint firstItem="POM-Ic-DGb" firstAttribute="leading" secondItem="B3e-f0-lUB" secondAttribute="leading" constant="12" id="67Y-eY-dcz"/>
+                                            <constraint firstItem="Rwx-gT-NLK" firstAttribute="leading" secondItem="B3e-f0-lUB" secondAttribute="leading" constant="12" id="8ZH-nl-XCD"/>
+                                            <constraint firstItem="Rwx-gT-NLK" firstAttribute="top" secondItem="POM-Ic-DGb" secondAttribute="bottom" constant="8" id="9kH-uV-vur"/>
+                                            <constraint firstAttribute="bottom" secondItem="gnX-iS-8dk" secondAttribute="bottom" id="LGq-T6-JyM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rwx-gT-NLK" secondAttribute="trailing" constant="12" id="LOi-Pc-E8r"/>
+                                            <constraint firstItem="POM-Ic-DGb" firstAttribute="top" secondItem="B3e-f0-lUB" secondAttribute="top" constant="8" id="Rvc-6Y-GVk"/>
+                                            <constraint firstItem="gnX-iS-8dk" firstAttribute="leading" secondItem="B3e-f0-lUB" secondAttribute="leading" id="Yas-ag-FHC"/>
+                                            <constraint firstAttribute="trailing" secondItem="gnX-iS-8dk" secondAttribute="trailing" id="aQN-Zp-7PV"/>
+                                            <constraint firstAttribute="trailing" secondItem="POM-Ic-DGb" secondAttribute="trailing" constant="12" id="e58-2d-6XY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1X6-Ur-xYh" userLabel="Button">
+                                        <rect key="frame" x="0.0" y="513.5" width="351" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W7N-Aj-Wo6">
+                                                <rect key="frame" x="0.0" y="0.0" width="351" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6G-75-vXE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="70"/>
+                                                        <state key="normal" title=" " image="Rewind"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFF-Sb-A12">
+                                                        <rect key="frame" x="72" y="0.0" width="63.5" height="70"/>
+                                                        <state key="normal" image="Nope"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN6-fw-mft">
+                                                        <rect key="frame" x="143.5" y="0.0" width="64" height="70"/>
+                                                        <state key="normal" image="Boost"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-f0-9Pg">
+                                                        <rect key="frame" x="215.5" y="0.0" width="63.5" height="70"/>
+                                                        <state key="normal" image="Like"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYl-g5-7lv">
+                                                        <rect key="frame" x="287" y="0.0" width="64" height="70"/>
+                                                        <state key="normal" image="Super Like"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="W7N-Aj-Wo6" firstAttribute="top" secondItem="1X6-Ur-xYh" secondAttribute="top" id="0bx-I8-7Ed"/>
+                                            <constraint firstAttribute="bottom" secondItem="W7N-Aj-Wo6" secondAttribute="bottom" id="D2Q-zV-7lC"/>
+                                            <constraint firstAttribute="trailing" secondItem="W7N-Aj-Wo6" secondAttribute="trailing" id="H5w-B3-EZD"/>
+                                            <constraint firstItem="W7N-Aj-Wo6" firstAttribute="leading" secondItem="1X6-Ur-xYh" secondAttribute="leading" id="SL0-BH-lCb"/>
+                                            <constraint firstAttribute="height" constant="70" id="kwM-aN-CH9"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1X6-Ur-xYh">
-                                <rect key="frame" x="16" y="577" width="343" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6G-75-vXE">
-                                        <rect key="frame" x="8" y="10" width="56" height="51"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title=" " image="Rewind"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFF-Sb-A12">
-                                        <rect key="frame" x="72" y="2" width="63" height="63"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="Nope"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN6-fw-mft">
-                                        <rect key="frame" x="146" y="11" width="51" height="51"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="Boost"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-f0-9Pg">
-                                        <rect key="frame" x="205" y="2" width="63" height="63"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="Like"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYl-g5-7lv">
-                                        <rect key="frame" x="276" y="10" width="51" height="51"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="Super Like"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SV3-Sb-ciQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="QeB-Iz-s0a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SV3-Sb-ciQ" secondAttribute="trailing" constant="12" id="pEe-JQ-wTx"/>
+                            <constraint firstItem="SV3-Sb-ciQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="q3U-ch-l5U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="OfN-IN-qAU"/>
+                    <connections>
+                        <outlet property="cardView" destination="B3e-f0-lUB" id="DLQ-qj-of0"/>
+                        <outlet property="stack" destination="SV3-Sb-ciQ" id="NZv-Xm-gTj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s1X-kY-OIu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gc9-b1-4HW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hqw-av-cgP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="27R-EJ-Wv8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="432-Ic-dwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
