@@ -7,4 +7,7 @@ target 'Tindoggo' do
 
   # Pods for Tindoggo
   pod 'RevealingSplashView'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 end

@@ -8,6 +8,7 @@
 
 import UIKit
 import RevealingSplashView
+import Firebase
 
 class HomeViewController: UIViewController {
     
@@ -18,6 +19,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var like: UIImageView!
     
     @IBOutlet weak var nope: UIImageView!
+    
+    let leftButton = UIButton(type: .custom)
     
     let splashScreen = RevealingSplashView(iconImage: UIImage(named: "splash_icon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: .white)
     
@@ -32,16 +35,25 @@ class HomeViewController: UIViewController {
         titleView.image = UIImage(named: "Actions")
         self.navigationItem.titleView = titleView
         
-        let leftButton = UIButton(type: .custom)
-        leftButton.setImage(UIImage(named: "login")!, for: .normal)
-        leftButton.imageView?.contentMode = .scaleAspectFit
-        leftButton.addTarget(self, action: #selector(presentModal), for: .touchUpInside)
+        self.leftButton.imageView?.contentMode = .scaleAspectFit
         
         let leftBarButton = UIBarButtonItem(customView: leftButton)
         navigationItem.leftBarButtonItem = leftBarButton
         
         let homeGR = UIPanGestureRecognizer(target: self, action: #selector(swipe))
         self.cardView.addGestureRecognizer(homeGR)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.leftButton.removeTarget(nil, action: nil, for: .allEvents)
+        if let _ = Auth.auth().currentUser {
+            self.leftButton.setImage(UIImage(named: "login_active")!, for: .normal)
+            self.leftButton.addTarget(self, action: #selector(presentProfile(sender:)), for: .touchUpInside)
+        }else{
+            self.leftButton.setImage(UIImage(named: "login")!, for: .normal)
+            self.leftButton.addTarget(self, action: #selector(presentModal), for: .touchUpInside)
+        }
     }
     
     @objc func swipe(gesture: UIPanGestureRecognizer){
@@ -72,6 +84,12 @@ class HomeViewController: UIViewController {
     @objc func presentModal(sender: UIButton){
         let story = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = story.instantiateViewController(withIdentifier: "loginVC")
+        present(vc, animated: true)
+    }
+    
+    @objc func presentProfile(sender: UIButton){
+        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = story.instantiateViewController(withIdentifier: "profileVC")
         present(vc, animated: true)
     }
     

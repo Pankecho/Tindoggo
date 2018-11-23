@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>106092800551-6q54qufr07g95nu535ppdjmmf18jvdsp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.106092800551-6q54qufr07g95nu535ppdjmmf18jvdsp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDZXYapqxU9BfIUMpwhw-Cd3jb7Ol--1K4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>106092800551</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.pankecho.Tindoggo</string>
+	<key>PROJECT_ID</key>
+	<string>tinderdoggo-6cac0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tinderdoggo-6cac0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:106092800551:ios:8e2b53a4a45885b1</string>
+	<key>DATABASE_URL</key>
+	<string>https://tinderdoggo-6cac0.firebaseio.com</string>
+</dict>
+</plist>

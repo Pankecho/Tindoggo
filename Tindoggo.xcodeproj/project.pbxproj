@@ -11,6 +11,9 @@
 		CBB8709021A7A211002D6359 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8708F21A7A211002D6359 /* LoginViewController.swift */; };
 		CBB8709321A7A7E6002D6359 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8709221A7A7E6002D6359 /* UIViewExtension.swift */; };
 		CBB8709521A7A889002D6359 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8709421A7A889002D6359 /* UIViewControllerExtension.swift */; };
+		CBB8709721A7AF48002D6359 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBB8709621A7AF47002D6359 /* GoogleService-Info.plist */; };
+		CBB8709A21A7B4E8002D6359 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8709921A7B4E8002D6359 /* DatabaseService.swift */; };
+		CBB8709C21A7C6D8002D6359 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8709B21A7C6D8002D6359 /* ProfileViewController.swift */; };
 		CBC87C9221A64F1200BADC42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC87C9121A64F1200BADC42 /* AppDelegate.swift */; };
 		CBC87C9721A64F1200BADC42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC87C9521A64F1200BADC42 /* Main.storyboard */; };
 		CBC87C9921A64F1300BADC42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC87C9821A64F1300BADC42 /* Assets.xcassets */; };
@@ -25,6 +28,9 @@
 		CBB8708F21A7A211002D6359 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CBB8709221A7A7E6002D6359 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CBB8709421A7A889002D6359 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		CBB8709621A7AF47002D6359 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CBB8709921A7B4E8002D6359 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		CBB8709B21A7C6D8002D6359 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CBC87C8E21A64F1200BADC42 /* Tindoggo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tindoggo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC87C9121A64F1200BADC42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBC87C9621A64F1200BADC42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +78,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CBB8709821A7B4D6002D6359 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CBB8709921A7B4E8002D6359 /* DatabaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CBC87C8521A64F1200BADC42 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +107,7 @@
 		CBC87C9021A64F1200BADC42 /* Tindoggo */ = {
 			isa = PBXGroup;
 			children = (
+				CBB8709821A7B4D6002D6359 /* Services */,
 				CBB8709121A7A7CD002D6359 /* Extensions */,
 				CBC87CA321A6583E00BADC42 /* Controller */,
 				CBC87C9121A64F1200BADC42 /* AppDelegate.swift */,
@@ -100,6 +115,7 @@
 				CBC87C9821A64F1300BADC42 /* Assets.xcassets */,
 				CBC87C9A21A64F1300BADC42 /* LaunchScreen.storyboard */,
 				CBC87C9D21A64F1300BADC42 /* Info.plist */,
+				CBB8709621A7AF47002D6359 /* GoogleService-Info.plist */,
 			);
 			path = Tindoggo;
 			sourceTree = "<group>";
@@ -109,6 +125,7 @@
 			children = (
 				CBC87CA421A6587300BADC42 /* HomeViewController.swift */,
 				CBB8708F21A7A211002D6359 /* LoginViewController.swift */,
+				CBB8709B21A7C6D8002D6359 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC87C9C21A64F1300BADC42 /* LaunchScreen.storyboard in Resources */,
+				CBB8709721A7AF48002D6359 /* GoogleService-Info.plist in Resources */,
 				CBC87C9921A64F1300BADC42 /* Assets.xcassets in Resources */,
 				CBC87C9721A64F1200BADC42 /* Main.storyboard in Resources */,
 			);
@@ -191,13 +209,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tindoggo/Pods-Tindoggo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -233,9 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB8709A21A7B4E8002D6359 /* DatabaseService.swift in Sources */,
 				CBB8709021A7A211002D6359 /* LoginViewController.swift in Sources */,
 				CBC87C9221A64F1200BADC42 /* AppDelegate.swift in Sources */,
 				CBB8709521A7A889002D6359 /* UIViewControllerExtension.swift in Sources */,
+				CBB8709C21A7C6D8002D6359 /* ProfileViewController.swift in Sources */,
 				CBB8709321A7A7E6002D6359 /* UIViewExtension.swift in Sources */,
 				CBC87CA521A6587300BADC42 /* HomeViewController.swift in Sources */,
 			);
