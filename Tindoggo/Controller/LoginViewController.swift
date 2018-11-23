@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.bindKeyboard()
     }
     
 
@@ -26,5 +27,8 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func closeButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

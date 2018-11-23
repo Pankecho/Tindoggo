@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		54B71DC1FC865C9776716996 /* Pods_Tindoggo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3CF6EC8396592A2FAB6118 /* Pods_Tindoggo.framework */; };
 		CBB8709021A7A211002D6359 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8708F21A7A211002D6359 /* LoginViewController.swift */; };
+		CBB8709321A7A7E6002D6359 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8709221A7A7E6002D6359 /* UIViewExtension.swift */; };
+		CBB8709521A7A889002D6359 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8709421A7A889002D6359 /* UIViewControllerExtension.swift */; };
 		CBC87C9221A64F1200BADC42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC87C9121A64F1200BADC42 /* AppDelegate.swift */; };
 		CBC87C9721A64F1200BADC42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC87C9521A64F1200BADC42 /* Main.storyboard */; };
 		CBC87C9921A64F1300BADC42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC87C9821A64F1300BADC42 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		9F3CF6EC8396592A2FAB6118 /* Pods_Tindoggo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tindoggo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECACEE347664A0F6A5B625B /* Pods-Tindoggo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindoggo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tindoggo/Pods-Tindoggo.release.xcconfig"; sourceTree = "<group>"; };
 		CBB8708F21A7A211002D6359 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CBB8709221A7A7E6002D6359 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		CBB8709421A7A889002D6359 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		CBC87C8E21A64F1200BADC42 /* Tindoggo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tindoggo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC87C9121A64F1200BADC42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBC87C9621A64F1200BADC42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +63,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CBB8709121A7A7CD002D6359 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CBB8709221A7A7E6002D6359 /* UIViewExtension.swift */,
+				CBB8709421A7A889002D6359 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CBC87C8521A64F1200BADC42 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +93,7 @@
 		CBC87C9021A64F1200BADC42 /* Tindoggo */ = {
 			isa = PBXGroup;
 			children = (
+				CBB8709121A7A7CD002D6359 /* Extensions */,
 				CBC87CA321A6583E00BADC42 /* Controller */,
 				CBC87C9121A64F1200BADC42 /* AppDelegate.swift */,
 				CBC87C9521A64F1200BADC42 /* Main.storyboard */,
@@ -221,6 +235,8 @@
 			files = (
 				CBB8709021A7A211002D6359 /* LoginViewController.swift in Sources */,
 				CBC87C9221A64F1200BADC42 /* AppDelegate.swift in Sources */,
+				CBB8709521A7A889002D6359 /* UIViewControllerExtension.swift in Sources */,
+				CBB8709321A7A7E6002D6359 /* UIViewExtension.swift in Sources */,
 				CBC87CA521A6587300BADC42 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

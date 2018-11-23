@@ -236,11 +236,24 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHB-68-jul">
+                                <rect key="frame" x="15" y="35" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="B67-Bc-9ut"/>
+                                    <constraint firstAttribute="height" constant="25" id="nZQ-es-onD"/>
+                                </constraints>
+                                <state key="normal" image="close_modal"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="BWL-Re-P9F" eventType="touchUpInside" id="1ts-6O-XAd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TIh-dB-4Zj" firstAttribute="centerX" secondItem="JlX-Em-fkp" secondAttribute="centerX" id="CEX-w5-UFP"/>
                             <constraint firstItem="TIh-dB-4Zj" firstAttribute="centerY" secondItem="JlX-Em-fkp" secondAttribute="centerY" id="NFa-Hh-Ofs"/>
+                            <constraint firstItem="WHB-68-jul" firstAttribute="top" secondItem="Opq-eD-h4l" secondAttribute="top" constant="15" id="SDw-7s-L0T"/>
+                            <constraint firstItem="WHB-68-jul" firstAttribute="leading" secondItem="Opq-eD-h4l" secondAttribute="leading" constant="15" id="UJJ-ez-Zy2"/>
                             <constraint firstItem="TIh-dB-4Zj" firstAttribute="width" secondItem="JlX-Em-fkp" secondAttribute="width" id="nfR-oH-Cr2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Opq-eD-h4l"/>
@@ -276,6 +289,7 @@
         <image name="Rewind" width="51" height="51"/>
         <image name="Super Like" width="51" height="51"/>
         <image name="Swipe Card" width="356" height="507"/>
+        <image name="close_modal" width="23" height="23"/>
         <image name="like_image" width="170" height="114"/>
         <image name="login_btn_bg" width="256" height="65"/>
         <image name="matilda" width="3024" height="4032"/>
