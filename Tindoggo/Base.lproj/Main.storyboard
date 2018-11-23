@@ -137,6 +137,119 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="sWA-Yg-sLK">
+            <objects>
+                <viewController storyboardIdentifier="loginVC" id="BWL-Re-P9F" customClass="LoginViewController" customModule="Tindoggo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JlX-Em-fkp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="TIh-dB-4Zj">
+                                <rect key="frame" x="0.0" y="89" width="375" height="489"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooB-bo-Ugz">
+                                        <rect key="frame" x="67.5" y="0.0" width="240" height="235"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="97Y-7q-JHO">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="235"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-s1-4ZR">
+                                                        <rect key="frame" x="85" y="0.0" width="70" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="9uX-ud-lp8"/>
+                                                            <constraint firstAttribute="height" constant="70" id="MY3-jn-3v2"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tindoggo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuU-MK-ORY">
+                                                        <rect key="frame" x="70" y="85" width="100" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="1Qv-M5-TMf"/>
+                                                            <constraint firstAttribute="width" constant="100" id="9el-Wp-xnl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                                        <color key="textColor" red="0.23529411764705882" green="0.2627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tindoggo es un Tinder para perritos y amantes de las mascotas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc9-ph-861">
+                                                        <rect key="frame" x="28" y="135" width="184" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="DI2-f7-APq"/>
+                                                            <constraint firstAttribute="width" constant="184" id="bwn-EA-wNN"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                        <color key="textColor" red="0.41176470588235292" green="0.42745098039215684" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="97Y-7q-JHO" firstAttribute="top" secondItem="ooB-bo-Ugz" secondAttribute="top" id="GBH-AH-2np"/>
+                                            <constraint firstAttribute="bottom" secondItem="97Y-7q-JHO" secondAttribute="bottom" id="K50-Tz-0Zz"/>
+                                            <constraint firstAttribute="trailing" secondItem="97Y-7q-JHO" secondAttribute="trailing" id="p2T-fV-rIy"/>
+                                            <constraint firstItem="97Y-7q-JHO" firstAttribute="leading" secondItem="ooB-bo-Ugz" secondAttribute="leading" id="xnh-mH-Hvv"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdF-np-iX2">
+                                        <rect key="frame" x="59.5" y="288" width="256" height="201"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="e4i-Of-c00">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="201"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="hola@tindoggo.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9v-4u-Vj1">
+                                                        <rect key="frame" x="3" y="0.0" width="250" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="0CG-8m-kc7"/>
+                                                            <constraint firstAttribute="width" constant="250" id="vzf-hl-JHT"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iC7-US-uUL">
+                                                        <rect key="frame" x="3" y="68" width="250" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="gwI-4f-Orb"/>
+                                                            <constraint firstAttribute="height" constant="50" id="npj-bK-EOJ"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afl-ri-usc">
+                                                        <rect key="frame" x="0.0" y="136" width="256" height="65"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                        <state key="normal" title="Login / Registro" backgroundImage="login_btn_bg">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="e4i-Of-c00" firstAttribute="top" secondItem="HdF-np-iX2" secondAttribute="top" id="2Zx-wn-w3i"/>
+                                            <constraint firstAttribute="bottom" secondItem="e4i-Of-c00" secondAttribute="bottom" id="7eC-2k-nKl"/>
+                                            <constraint firstItem="e4i-Of-c00" firstAttribute="leading" secondItem="HdF-np-iX2" secondAttribute="leading" id="Ucm-Rd-iAi"/>
+                                            <constraint firstAttribute="trailing" secondItem="e4i-Of-c00" secondAttribute="trailing" id="g2y-1A-dGh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TIh-dB-4Zj" firstAttribute="centerX" secondItem="JlX-Em-fkp" secondAttribute="centerX" id="CEX-w5-UFP"/>
+                            <constraint firstItem="TIh-dB-4Zj" firstAttribute="centerY" secondItem="JlX-Em-fkp" secondAttribute="centerY" id="NFa-Hh-Ofs"/>
+                            <constraint firstItem="TIh-dB-4Zj" firstAttribute="width" secondItem="JlX-Em-fkp" secondAttribute="width" id="nfR-oH-Cr2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Opq-eD-h4l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22h-tA-DxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1735.2" y="128.18590704647679"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="s1X-kY-OIu">
             <objects>
@@ -164,7 +277,9 @@
         <image name="Super Like" width="51" height="51"/>
         <image name="Swipe Card" width="356" height="507"/>
         <image name="like_image" width="170" height="114"/>
+        <image name="login_btn_bg" width="256" height="65"/>
         <image name="matilda" width="3024" height="4032"/>
         <image name="nope_image" width="197" height="130"/>
+        <image name="splash_icon" width="83" height="83"/>
     </resources>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RevealingSplashView
 
 class HomeViewController: UIViewController {
     
@@ -18,12 +19,26 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var nope: UIImageView!
     
+    let splashScreen = RevealingSplashView(iconImage: UIImage(named: "splash_icon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: .white)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.addSubview(self.splashScreen)
+        self.splashScreen.animationType = .swingAndZoomOut
+        self.splashScreen.startAnimation()
+        
         let titleView = NavigationImageView()
         titleView.image = UIImage(named: "Actions")
         self.navigationItem.titleView = titleView
+        
+        let leftButton = UIButton(type: .custom)
+        leftButton.setImage(UIImage(named: "login")!, for: .normal)
+        leftButton.imageView?.contentMode = .scaleAspectFit
+        leftButton.addTarget(self, action: #selector(presentModal), for: .touchUpInside)
+        
+        let leftBarButton = UIBarButtonItem(customView: leftButton)
+        navigationItem.leftBarButtonItem = leftBarButton
         
         let homeGR = UIPanGestureRecognizer(target: self, action: #selector(swipe))
         self.cardView.addGestureRecognizer(homeGR)
@@ -52,7 +67,12 @@ class HomeViewController: UIViewController {
                 self.cardView.transform = rotate.scaledBy(x: 1, y: 1)
             }
         }
-        
+    }
+    
+    @objc func presentModal(sender: UIButton){
+        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = story.instantiateViewController(withIdentifier: "loginVC")
+        present(vc, animated: true)
     }
     
 }
