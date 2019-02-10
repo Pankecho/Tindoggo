@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
     
     let leftButton = UIButton(type: .custom)
     
+    var usuario: Usuario?
+    
     let splashScreen = RevealingSplashView(iconImage: UIImage(named: "splash_icon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: .white)
     
     override func viewDidLoad() {
@@ -42,6 +44,10 @@ class HomeViewController: UIViewController {
         
         let homeGR = UIPanGestureRecognizer(target: self, action: #selector(swipe))
         self.cardView.addGestureRecognizer(homeGR)
+        
+        DatabaseService.instance.observeUserProfile { (user) in
+            self.usuario = user
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -89,8 +95,9 @@ class HomeViewController: UIViewController {
     
     @objc func presentProfile(sender: UIButton){
         let story = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc = story.instantiateViewController(withIdentifier: "profileVC")
-        present(vc, animated: true)
+        let vc = story.instantiateViewController(withIdentifier: "profileVC") as! ProfileViewController
+        vc.usuario = self.usuario
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

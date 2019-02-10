@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
                         if let e = error {
                             self.showAlert(title: "Error", message: e.localizedDescription)
                         }else{
-                            
+                            self.dismiss(animated: true, completion: nil)
                         }
                     }
                 }
@@ -67,13 +67,6 @@ class LoginViewController: UIViewController {
             self.goToLoginButton.setTitle("Login", for: .normal)
             self.modoRegistro = true
         }
-    }
-    
-    
-    func showAlert(title: String, message: String){
-        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(ac, animated: true)
     }
 
     /*
