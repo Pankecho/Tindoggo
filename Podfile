@@ -10,4 +10,5 @@ target 'Tindoggo' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'SDWebImage'
 end

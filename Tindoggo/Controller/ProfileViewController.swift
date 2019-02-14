@@ -33,7 +33,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func logOut(_ sender: UIButton) {
         try! Auth.auth().signOut()
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func addUsers(_ sender: UIButton) {

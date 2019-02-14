@@ -15,6 +15,7 @@ class DatabaseService{
     static let instance = DatabaseService()
     private let _base_ref = DB_ROOT
     private let _user_ref = DB_ROOT.child("users")
+    private let _match_ref = DB_ROOT.child("match")
     
     var base_ref: DatabaseReference{
         return _base_ref
@@ -24,8 +25,16 @@ class DatabaseService{
         return _user_ref
     }
     
+    var match_ref: DatabaseReference{
+        return _match_ref
+    }
+    
     func createFirebaseUser(uid: String, userData: [String: Any]){
         user_ref.child(uid).updateChildValues(userData)
+    }
+    
+    func createFirebaseMatch(uidUno: String, uidDos: String){
+        match_ref.child(uidUno).updateChildValues(["userDos": uidDos, "isMatchAccepted": false])
     }
     
     func observeUserProfile(handler: @escaping(_ userProfile: Usuario?) -> Void){

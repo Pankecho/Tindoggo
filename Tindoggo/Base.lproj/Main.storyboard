@@ -128,7 +128,9 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="OfN-IN-qAU"/>
                     <connections>
                         <outlet property="cardView" destination="B3e-f0-lUB" id="DLQ-qj-of0"/>
+                        <outlet property="imageActual" destination="POM-Ic-DGb" id="ZXj-aL-QF6"/>
                         <outlet property="like" destination="SQO-Nu-NlJ" id="llR-3M-4MS"/>
+                        <outlet property="nameLabel" destination="Rwx-gT-NLK" id="hPl-zC-wV0"/>
                         <outlet property="nope" destination="ODN-8U-8F0" id="4kz-Rd-xA7"/>
                         <outlet property="stack" destination="SV3-Sb-ciQ" id="NZv-Xm-gTj"/>
                     </connections>
@@ -305,15 +307,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Z0u-eU-iC7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0c-TL-Alv">
-                                <rect key="frame" x="121" y="417" width="135" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Importar usuarios"/>
-                                <connections>
-                                    <action selector="addUsers:" destination="dFX-6V-AHJ" eventType="touchUpInside" id="C9Q-F8-759"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vfe-2l-BWM">
                                 <rect key="frame" x="60" y="50" width="255" height="334"/>
                                 <subviews>

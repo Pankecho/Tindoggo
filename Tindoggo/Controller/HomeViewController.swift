@@ -19,10 +19,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var like: UIImageView!
     
     @IBOutlet weak var nope: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var imageActual: UIImageView!
     let leftButton = UIButton(type: .custom)
     
     var usuario: Usuario?
+    
+    var usuarioActualID: String?
+    
+    var users: [Usuario]! = []
     
     let splashScreen = RevealingSplashView(iconImage: UIImage(named: "splash_icon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: .white)
     
@@ -45,8 +51,19 @@ class HomeViewController: UIViewController {
         let homeGR = UIPanGestureRecognizer(target: self, action: #selector(swipe))
         self.cardView.addGestureRecognizer(homeGR)
         
-        DatabaseService.instance.observeUserProfile { (user) in
-            self.usuario = user
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if let user = user {
+                
+            }else{
+                
+            }
+            DatabaseService.instance.observeUserProfile { (user) in
+                self.usuario = user
+            }
+            self.getUsers()
+        }
+        WatchDBService.instance.observeMatch { (match) in
+            print(match)
         }
     }
     
@@ -74,11 +91,19 @@ class HomeViewController: UIViewController {
         
         
         if gesture.state == .ended {
-            if self.cardView.center.x < (self.view.bounds.width / 2) {
+            if self.cardView.center.x < (self.view.bounds.width / 2 - 100) {
                 // Dislike
-            }else {
-                // Like
             }
+            if self.cardView.center.x > (self.view.bounds.width / 2 + 100) {
+                // Like
+                if let uid2 = usuarioActualID, let user = self.usuario{
+                    DatabaseService.instance.createFirebaseMatch(uidUno: user.uid, uidDos: uid2)
+                }
+            }
+            if self.users.count > 0{
+                self.updateImage(uid: self.users[self.random(range: 0..<self.users.count)].uid)
+            }
+            
             UIView.animate(withDuration: 0.5) {[unowned self] in
                 self.cardView.center = CGPoint(x: (self.stack.bounds.width / 2), y: (self.stack.bounds.height / 2) - 35)
                 rotate = CGAffineTransform(rotationAngle: CGFloat(integerLiteral: 0))
@@ -100,6 +125,34 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func getUsers(){
+        DatabaseService.instance.user_ref.observeSingleEvent(of: .value) { (data) in
+            let users = data.children.compactMap{ Usuario(snapshot: $0 as! DataSnapshot)}
+            for user in users{
+                self.users?.append(user)
+                print(user)
+            }
+            
+            if self.users.count > 0{
+                self.updateImage(uid: (self.users.first?.uid)!)
+            }
+        }
+    }
+    
+    func updateImage(uid: String){
+        DatabaseService.instance.user_ref.child(uid).observeSingleEvent(of: .value) { (data) in
+            if let user = Usuario(snapshot: data){
+                self.imageActual.sd_setImage(with: URL(string: user.imagen), completed: nil)
+                self.nameLabel.text = user.username
+                self.usuarioActualID = user.uid
+            }
+        }
+    
+    }
+    
+    func random(range: Range<Int>) -> Int{
+        return range.lowerBound + Int(arc4random_uniform(UInt32(range.upperBound - range.lowerBound)))
+    }
 }
 
 class NavigationImageView: UIImageView{

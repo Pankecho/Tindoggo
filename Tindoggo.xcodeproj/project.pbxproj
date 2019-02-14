@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		54B71DC1FC865C9776716996 /* Pods_Tindoggo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3CF6EC8396592A2FAB6118 /* Pods_Tindoggo.framework */; };
 		CB62AA1E21A9240F0094003B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB62AA1D21A9240F0094003B /* Usuario.swift */; };
+		CB9DF5592215399C004F9B20 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DF5582215399C004F9B20 /* Match.swift */; };
+		CB9DF55B22153B24004F9B20 /* WatchDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DF55A22153B24004F9B20 /* WatchDBService.swift */; };
 		CBB8709021A7A211002D6359 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8708F21A7A211002D6359 /* LoginViewController.swift */; };
 		CBB8709321A7A7E6002D6359 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8709221A7A7E6002D6359 /* UIViewExtension.swift */; };
 		CBB8709521A7A889002D6359 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8709421A7A889002D6359 /* UIViewControllerExtension.swift */; };
@@ -27,6 +29,8 @@
 		9F3CF6EC8396592A2FAB6118 /* Pods_Tindoggo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tindoggo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECACEE347664A0F6A5B625B /* Pods-Tindoggo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindoggo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tindoggo/Pods-Tindoggo.release.xcconfig"; sourceTree = "<group>"; };
 		CB62AA1D21A9240F0094003B /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		CB9DF5582215399C004F9B20 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		CB9DF55A22153B24004F9B20 /* WatchDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDBService.swift; sourceTree = "<group>"; };
 		CBB8708F21A7A211002D6359 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CBB8709221A7A7E6002D6359 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CBB8709421A7A889002D6359 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				CB62AA1D21A9240F0094003B /* Usuario.swift */,
+				CB9DF5582215399C004F9B20 /* Match.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CBB8709921A7B4E8002D6359 /* DatabaseService.swift */,
+				CB9DF55A22153B24004F9B20 /* WatchDBService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -274,6 +280,8 @@
 			files = (
 				CB62AA1E21A9240F0094003B /* Usuario.swift in Sources */,
 				CBB8709A21A7B4E8002D6359 /* DatabaseService.swift in Sources */,
+				CB9DF5592215399C004F9B20 /* Match.swift in Sources */,
+				CB9DF55B22153B24004F9B20 /* WatchDBService.swift in Sources */,
 				CBB8709021A7A211002D6359 /* LoginViewController.swift in Sources */,
 				CBC87C9221A64F1200BADC42 /* AppDelegate.swift in Sources */,
 				CBB8709521A7A889002D6359 /* UIViewControllerExtension.swift in Sources */,

@@ -15,6 +15,7 @@ class Usuario {
     let provider: String
     let imagen: String
     let username: String
+    let onMatch: Bool
     
     init?(snapshot: DataSnapshot){
         let uid = snapshot.key
@@ -22,12 +23,14 @@ class Usuario {
             let email = diccionario["email"] as? String,
             let provider = diccionario["provider"] as? String,
             let imagen = diccionario["profileImage"] as? String,
-            let username = diccionario["displayName"] as? String else { return nil }
+            let username = diccionario["displayName"] as? String,
+            let onMatch = diccionario["userIsOnMatch"] as? Bool else { return nil }
         
         self.uid = uid
         self.email = email
         self.provider = provider
         self.imagen = imagen
         self.username = username
+        self.onMatch = onMatch
     }
 }
