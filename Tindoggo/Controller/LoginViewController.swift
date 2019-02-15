@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
                             self.showAlert(title: "Error", message: e.localizedDescription)
                         }else{
                             if let datos = data {
-                                let info = ["provider": datos.user.providerID, "email": datos.user.email, "profileImage": "", "displayName": ""]
+                                let info = ["provider": datos.user.providerID, "email": datos.user.email, "profileImage": "", "displayName": "", "userIsOnMatch": false] as [String: Any]
                                 DatabaseService.instance.createFirebaseUser(uid: datos.user.uid, userData: info as [String : Any])
                             }
                         }

@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var imageActual: UIImageView!
     let leftButton = UIButton(type: .custom)
+    let rightButton = UIButton(type: .custom)
     
     var usuario: Usuario?
     
@@ -48,6 +49,11 @@ class HomeViewController: UIViewController {
         let leftBarButton = UIBarButtonItem(customView: leftButton)
         navigationItem.leftBarButtonItem = leftBarButton
         
+        self.rightButton.setImage(UIImage(named: "match_inactive"), for: .normal)
+        self.rightButton.imageView?.contentMode = .scaleAspectFit
+        let rightBarButton = UIBarButtonItem(customView: rightButton)
+        navigationItem.rightBarButtonItem = rightBarButton
+        
         let homeGR = UIPanGestureRecognizer(target: self, action: #selector(swipe))
         self.cardView.addGestureRecognizer(homeGR)
         
@@ -64,6 +70,13 @@ class HomeViewController: UIViewController {
         }
         WatchDBService.instance.observeMatch { (match) in
             print(match)
+            if let _ = match{
+                if let user = self.usuario{
+                    if !user.onMatch{
+                        self.changeRightButton(status: true)
+                    }
+                }
+            }
         }
     }
     
@@ -76,6 +89,14 @@ class HomeViewController: UIViewController {
         }else{
             self.leftButton.setImage(UIImage(named: "login")!, for: .normal)
             self.leftButton.addTarget(self, action: #selector(presentModal), for: .touchUpInside)
+        }
+    }
+    
+    func changeRightButton(status: Bool){
+        if status{
+            self.rightButton.setImage(UIImage(named: "match_active"), for: .normal)
+        }else{
+            self.rightButton.setImage(UIImage(named: "match_inactive"), for: .normal)
         }
     }
     
