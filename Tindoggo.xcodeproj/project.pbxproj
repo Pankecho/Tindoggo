@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		54B71DC1FC865C9776716996 /* Pods_Tindoggo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3CF6EC8396592A2FAB6118 /* Pods_Tindoggo.framework */; };
+		CB4440C42227AC65008063E2 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4440C32227AC65008063E2 /* MatchViewController.swift */; };
+		CB4440C62227B019008063E2 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4440C52227B019008063E2 /* UIImageExtension.swift */; };
 		CB62AA1E21A9240F0094003B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB62AA1D21A9240F0094003B /* Usuario.swift */; };
 		CB9DF5592215399C004F9B20 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DF5582215399C004F9B20 /* Match.swift */; };
 		CB9DF55B22153B24004F9B20 /* WatchDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DF55A22153B24004F9B20 /* WatchDBService.swift */; };
@@ -28,6 +30,8 @@
 		8FAB6C7110E68F196E2EF911 /* Pods-Tindoggo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindoggo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tindoggo/Pods-Tindoggo.debug.xcconfig"; sourceTree = "<group>"; };
 		9F3CF6EC8396592A2FAB6118 /* Pods_Tindoggo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tindoggo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECACEE347664A0F6A5B625B /* Pods-Tindoggo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindoggo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tindoggo/Pods-Tindoggo.release.xcconfig"; sourceTree = "<group>"; };
+		CB4440C32227AC65008063E2 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		CB4440C52227B019008063E2 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		CB62AA1D21A9240F0094003B /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		CB9DF5582215399C004F9B20 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		CB9DF55A22153B24004F9B20 /* WatchDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDBService.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			children = (
 				CBB8709221A7A7E6002D6359 /* UIViewExtension.swift */,
 				CBB8709421A7A889002D6359 /* UIViewControllerExtension.swift */,
+				CB4440C52227B019008063E2 /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				CBC87CA421A6587300BADC42 /* HomeViewController.swift */,
 				CBB8708F21A7A211002D6359 /* LoginViewController.swift */,
 				CBB8709B21A7C6D8002D6359 /* ProfileViewController.swift */,
+				CB4440C32227AC65008063E2 /* MatchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,9 +291,11 @@
 				CBB8709021A7A211002D6359 /* LoginViewController.swift in Sources */,
 				CBC87C9221A64F1200BADC42 /* AppDelegate.swift in Sources */,
 				CBB8709521A7A889002D6359 /* UIViewControllerExtension.swift in Sources */,
+				CB4440C42227AC65008063E2 /* MatchViewController.swift in Sources */,
 				CBB8709C21A7C6D8002D6359 /* ProfileViewController.swift in Sources */,
 				CBB8709321A7A7E6002D6359 /* UIViewExtension.swift in Sources */,
 				CBC87CA521A6587300BADC42 /* HomeViewController.swift in Sources */,
+				CB4440C62227B019008063E2 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

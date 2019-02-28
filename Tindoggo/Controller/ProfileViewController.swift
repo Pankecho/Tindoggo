@@ -21,10 +21,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.profileImage.layer.cornerRadius = self.profileImage.bounds.size.height / 2
-        self.profileImage.layer.borderColor = UIColor.white.cgColor
-        self.profileImage.layer.borderWidth = 1.0
-        self.profileImage.clipsToBounds = true
+        self.profileImage.roundImage()
         
         self.emailLabel.text = self.usuario?.email
         self.usernameLabel.text = self.usuario?.username

@@ -364,10 +364,10 @@
             </objects>
             <point key="canvasLocation" x="2416.8000000000002" y="128.18590704647679"/>
         </scene>
-        <!--View Controller-->
+        <!--Match View Controller-->
         <scene sceneID="Sbk-ZM-3mo">
             <objects>
-                <viewController id="TfG-dr-sDv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="match_vc" id="TfG-dr-sDv" customClass="MatchViewController" customModule="Tindoggo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6AD-pY-62H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -414,6 +414,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Aceptar" backgroundImage="login_btn_bg"/>
+                                        <connections>
+                                            <action selector="aceptarButton:" destination="TfG-dr-sDv" eventType="touchUpInside" id="MoX-8z-Zmn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -426,6 +429,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4ZG-aH-qAa"/>
                     </view>
+                    <connections>
+                        <outlet property="matchDescription" destination="jPT-N7-g9V" id="E6N-Or-qc9"/>
+                        <outlet property="userMatchOne" destination="lq0-l2-tJG" id="Xr6-qB-1OB"/>
+                        <outlet property="userMatchTwo" destination="6v9-Uk-BCd" id="Hw4-YE-iY8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lrv-2F-IBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

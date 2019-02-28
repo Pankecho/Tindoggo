@@ -29,6 +29,8 @@ class HomeViewController: UIViewController {
     
     var usuarioActualID: String?
     
+    var match: Match?
+    
     var users: [Usuario]! = []
     
     let splashScreen = RevealingSplashView(iconImage: UIImage(named: "splash_icon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: .white)
@@ -69,7 +71,6 @@ class HomeViewController: UIViewController {
             self.getUsers()
         }
         WatchDBService.instance.observeMatch { (match) in
-            print(match)
             if let _ = match{
                 if let user = self.usuario{
                     if !user.onMatch{
@@ -97,8 +98,10 @@ class HomeViewController: UIViewController {
     func changeRightButton(status: Bool){
         if status{
             self.rightButton.setImage(UIImage(named: "match_active"), for: .normal)
+            self.rightButton.addTarget(self, action: #selector(presentMatch), for: .touchUpInside)
         }else{
             self.rightButton.setImage(UIImage(named: "match_inactive"), for: .normal)
+            self.rightButton.removeTarget(self, action: #selector(presentMatch), for: .touchUpInside)
         }
     }
     
@@ -148,12 +151,21 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @objc func presentMatch(sender: UIButton){
+        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = story.instantiateViewController(withIdentifier: "match_vc") as! MatchViewController
+        vc.currentUserProfile = self.usuario
+        vc.currentMatch = self.match
+        present(vc, animated: true)
+    }
+    
     func getUsers(){
-        DatabaseService.instance.user_ref.observeSingleEvent(of: .value) { (data) in
+        DatabaseService.instance.user_ref.observeSingleEvent(of: .value) { [unowned self](data) in
             let users = data.children.compactMap{ Usuario(snapshot: $0 as! DataSnapshot)}
             for user in users{
-                self.users?.append(user)
-                print(user)
+                if self.usuario?.uid != user.uid{
+                    self.users?.append(user)
+                }
             }
             
             if self.users.count > 0{

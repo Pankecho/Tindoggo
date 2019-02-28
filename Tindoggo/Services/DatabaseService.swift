@@ -47,4 +47,12 @@ class DatabaseService{
         }
     }
     
+    func getUserById(id: String, handler: @escaping(_ userProfile: Usuario?) -> Void){
+        DatabaseService.instance._user_ref.child(id).observe(.value) { (snap) in
+            if let usuario = Usuario(snapshot: snap) {
+                handler(usuario)
+            }
+        }
+    }
+    
 }
