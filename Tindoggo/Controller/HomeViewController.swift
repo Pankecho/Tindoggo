@@ -67,19 +67,19 @@ class HomeViewController: UIViewController {
             }
             DatabaseService.instance.observeUserProfile { (user) in
                 self.usuario = user
-            }
-            self.getUsers()
-        }
-        WatchDBService.instance.observeMatch { (match) in
-            if let _ = match{
-                if let user = self.usuario{
-                    if !user.onMatch{
-                        self.changeRightButton(status: true)
+                WatchDBService.instance.observeMatch { (match) in
+                    if let _ = match{
+                        if let user = self.usuario{
+                            if !user.onMatch{
+                                self.changeRightButton(status: true)
+                            }
+                        }
+                    }else{
+                        self.changeRightButton(status: false)
                     }
                 }
-            }else{
-                self.changeRightButton(status: false)
             }
+            self.getUsers()
         }
     }
     

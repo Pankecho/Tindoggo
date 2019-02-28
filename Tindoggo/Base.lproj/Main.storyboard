@@ -430,6 +430,7 @@
                         <viewLayoutGuide key="safeArea" id="4ZG-aH-qAa"/>
                     </view>
                     <connections>
+                        <outlet property="boton" destination="1gX-O3-eI7" id="AIG-pi-zIN"/>
                         <outlet property="matchDescription" destination="jPT-N7-g9V" id="E6N-Or-qc9"/>
                         <outlet property="userMatchOne" destination="lq0-l2-tJG" id="Xr6-qB-1OB"/>
                         <outlet property="userMatchTwo" destination="6v9-Uk-BCd" id="Hw4-YE-iY8"/>

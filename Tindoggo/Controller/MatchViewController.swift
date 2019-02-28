@@ -15,6 +15,9 @@ class MatchViewController: UIViewController {
     @IBOutlet weak var userMatchOne: UIImageView!
     @IBOutlet weak var userMatchTwo: UIImageView!
     
+    
+    @IBOutlet weak var boton: UIButton!
+    
     var currentUserProfile: Usuario?
     var currentMatch: Match?
     
@@ -39,11 +42,14 @@ class MatchViewController: UIViewController {
                             // init match
                             self.userMatchOne.sd_setImage(with: URL(string: user.imagen), completed: nil)
                             self.userMatchTwo.sd_setImage(with: URL(string: userD.imagen), completed: nil)
+                            self.matchDescription.text = "Esperando a \(userD.username)"
+                            self.boton.alpha = 0
                         }else{
                             // match
                             self.userMatchOne.sd_setImage(with: URL(string: userD.imagen), completed: nil)
                             self.userMatchTwo.sd_setImage(with: URL(string: user.imagen), completed: nil)
                             self.matchDescription.text = "Tu mascota le gusta a \(userD.username)"
+                            self.boton.alpha = 1
                         }
                     }
                 }
@@ -64,6 +70,12 @@ class MatchViewController: UIViewController {
     }
     */
     @IBAction func aceptarButton(_ sender: UIButton) {
+        if let match = currentMatch {
+            if !match.isMatchAccepted {
+                DatabaseService.instance.updateMatch(id: match.uidUno)
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
 }

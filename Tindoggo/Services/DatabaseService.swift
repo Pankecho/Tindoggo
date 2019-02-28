@@ -55,4 +55,8 @@ class DatabaseService{
         }
     }
     
+    func updateMatch(id: String){
+        match_ref.child(id).updateChildValues(["isMatchAccepted": true])
+    }
+    
 }
