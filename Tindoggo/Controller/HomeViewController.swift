@@ -76,6 +76,8 @@ class HomeViewController: UIViewController {
                         self.changeRightButton(status: true)
                     }
                 }
+            }else{
+                self.changeRightButton(status: false)
             }
         }
     }
